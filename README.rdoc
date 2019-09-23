@@ -1,0 +1,40 @@
+= minitest-global_expectations
+
+minitest-global_expectations allows you to keep using simple code in your
+minitest specs, without having to wrap every single object you are calling
+an expectation method on with <tt>_</tt>:
+
+  # You can use:
+  foo.must_equal 1
+
+  # instead of:
+  _(foo).must_equal 1
+
+Calling expectation methods on all objects was supported in Minitest <5.12,
+was deprecated in Minitest 5.12, and is planned to be removed from Minitest 6.
+
+= Installation
+
+  gem install minitest-global_expectations
+
+= Source Code
+
+Source code is available on GitHub at https://github.com/jeremyevans/minitest-global_expectations
+
+= Usage 
+
+Just require the library.  You can switch requires of +minitest/spec+ to:
+
+  require 'minitest/global_expectations'
+
+Alternatively, if you are requiring +minitest/autorun+, you can switch to:
+
+  require 'minitest/global_expectations/autorun'
+
+= License
+
+MIT
+
+= Author
+
+Jeremy Evans <code@jeremyevans.net>
