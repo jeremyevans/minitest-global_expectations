@@ -39,4 +39,4 @@ module MinitestGlobalExpectations
   end
 
   ::Object.send(:include, self)
-end
+end if defined?(Minitest::Expectation)
