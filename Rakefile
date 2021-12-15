@@ -12,7 +12,7 @@ end
 
 desc "Run test"
 task :test do
-  sh %{#{FileUtils::RUBY} test/minitest_global_expectations_test.rb}
+  sh %{#{FileUtils::RUBY} #{"-w" if RUBY_VERSION >= '3'} test/minitest_global_expectations_test.rb}
 end
 
 task :default=>:test
