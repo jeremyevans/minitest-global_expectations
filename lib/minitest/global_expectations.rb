@@ -1,6 +1,8 @@
 require 'minitest/spec'
 
+# :nocov:
 module MinitestGlobalExpectations
+# :nocov:
   [
     :must_be_empty,
     :must_equal,

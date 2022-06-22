@@ -1,7 +1,6 @@
-require "rake"
 require "rake/clean"
 
-CLEAN.include ["minitest-global_expectations-*.gem"]
+CLEAN.include ["minitest-global_expectations-*.gem", "coverage"]
 
 desc "Build minitest-global_expectations gem"
 task :package=>[:clean] do |p|
@@ -16,3 +15,9 @@ task :test do
 end
 
 task :default=>:test
+
+desc "Run tests with coverage"
+task :test_cov do
+  ENV['COVERAGE'] = '1'
+  sh %{#{FileUtils::RUBY} test/minitest_global_expectations_test.rb}
+end
