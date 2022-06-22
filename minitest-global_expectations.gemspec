@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.summary = "Support minitest expectation methods for all objects"
   s.author = "Jeremy Evans"
   s.email = "code@jeremyevans.net"
-  s.homepage = "http://github.com/jeremyevans/minitest-global_expectations"
-  s.files = %w(MIT-LICENSE CHANGELOG README.rdoc Rakefile) + Dir["{test,lib}/**/*.rb"]
+  s.homepage = "https://github.com/jeremyevans/minitest-global_expectations"
+  s.files = %w(MIT-LICENSE CHANGELOG README.rdoc) + Dir["lib/**/*.rb"]
   s.description = <<END
 minitest-global_expectations allows you to keep using simple code in your
 minitest specs, without having to wrap every single object you are calling
