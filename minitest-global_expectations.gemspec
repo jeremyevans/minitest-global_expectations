@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'minitest-global_expectations'
-  s.version = '1.0.1'
+  s.version = '1.0.2'
   s.platform = Gem::Platform::RUBY
   s.extra_rdoc_files = ["README.rdoc", "CHANGELOG", "MIT-LICENSE"]
   s.rdoc_options += ["--quiet", "--line-numbers", "--inline-source", '--title', 'minitest-global_expectations: add expectation methods to all objects', '--main', 'README.rdoc']
