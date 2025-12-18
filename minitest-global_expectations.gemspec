@@ -9,7 +9,14 @@ Gem::Specification.new do |s|
   s.author = "Jeremy Evans"
   s.email = "code@jeremyevans.net"
   s.homepage = "https://github.com/jeremyevans/minitest-global_expectations"
+  s.metadata = {
+    'bug_tracker_uri'   => 'https://github.com/jeremyevans/minitest-global_expectations/issues',
+    'changelog_uri'     => 'https://github.com/jeremyevans/minitest-global_expectations/blob/master/CHANGELOG',
+    'mailing_list_uri'  => 'https://github.com/jeremyevans/minitest-global_expectations/discussions',
+    'source_code_uri'   => 'https://github.com/jeremyevans/minitest-global_expectations',
+  }
   s.files = %w(MIT-LICENSE CHANGELOG README.rdoc) + Dir["lib/**/*.rb"]
+  s.required_ruby_version = ">= 1.8"
   s.description = <<END
 minitest-global_expectations allows you to keep using simple code in your
 minitest specs, without having to wrap every single object you are calling
