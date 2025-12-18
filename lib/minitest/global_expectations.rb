@@ -2,7 +2,20 @@ require 'minitest/spec'
 
 # :nocov:
 module MinitestGlobalExpectations
+  if Minitest::VERSION >= '6'
 # :nocov:
+    class ::Minitest::Spec
+      def self.current
+        Thread.current[:current_spec]
+      end
+
+      def initialize name # :nodoc:
+        super
+        Thread.current[:current_spec] = self
+      end
+    end
+  end
+
   [
     :must_be_empty,
     :must_equal,
