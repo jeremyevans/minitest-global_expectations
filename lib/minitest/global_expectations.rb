@@ -1,9 +1,9 @@
 require 'minitest/spec'
 
-# :nocov:
+# simplecov:disable
 module MinitestGlobalExpectations
   if Minitest::VERSION >= '6'
-# :nocov:
+# simplecov:enable
     class ::Minitest::Spec
       def self.current
         Thread.current[:current_spec]
